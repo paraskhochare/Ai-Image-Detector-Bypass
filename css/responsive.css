@@ -1,0 +1,580 @@
+/* ==========================================================
+   responsive.css
+   Responsive Design
+========================================================== */
+
+/* ==========================================================
+   Large Desktop
+========================================================== */
+
+@media (min-width:1600px){
+
+.hero{
+
+max-width:1500px;
+
+margin:auto;
+
+}
+
+section{
+
+padding:120px 8%;
+
+}
+
+.hero h1{
+
+font-size:82px;
+
+}
+
+}
+
+/* ==========================================================
+   Laptop
+========================================================== */
+
+@media (max-width:1200px){
+
+.hero{
+
+gap:50px;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+.hero-image{
+
+transform:scale(.9);
+
+}
+
+.feature-grid,
+
+.workflow-grid,
+
+.gallery-grid,
+
+.testimonial-grid{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================================================
+   Tablet
+========================================================== */
+
+@media (max-width:992px){
+
+.navbar{
+
+padding:18px 6%;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+padding-top:150px;
+
+}
+
+.hero p{
+
+margin:auto;
+
+margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-stats{
+
+justify-content:center;
+
+}
+
+.hero-image{
+
+width:100%;
+
+margin-top:40px;
+
+}
+
+.feature-grid,
+
+.workflow-grid,
+
+.gallery-grid,
+
+.testimonial-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.statistics{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+}
+
+.download-card{
+
+padding:50px;
+
+}
+
+.section-title h2{
+
+font-size:38px;
+
+}
+
+}
+
+/* ==========================================================
+   Mobile Navigation
+========================================================== */
+
+@media (max-width:768px){
+
+.menu-btn{
+
+display:block;
+
+z-index:9999;
+
+}
+
+.nav-links{
+
+position:fixed;
+
+top:80px;
+
+left:-100%;
+
+width:100%;
+
+height:calc(100vh - 80px);
+
+background:#090c13;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-start;
+
+align-items:center;
+
+padding-top:60px;
+
+gap:30px;
+
+transition:.35s;
+
+}
+
+.nav-links.active{
+
+left:0;
+
+}
+
+.hero{
+
+padding-top:130px;
+
+}
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.hero-stats{
+
+gap:30px;
+
+}
+
+.hero-stats h2{
+
+font-size:28px;
+
+}
+
+.floating-card{
+
+width:100%;
+
+max-width:340px;
+
+}
+
+.download-card{
+
+padding:40px 25px;
+
+}
+
+.download-card h2{
+
+font-size:34px;
+
+}
+
+.download-buttons{
+
+flex-direction:column;
+
+}
+
+.download-buttons a{
+
+width:100%;
+
+}
+
+.statistics{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-links{
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.social-icons{
+
+flex-wrap:wrap;
+
+}
+
+.close-btn{
+
+top:15px;
+
+right:15px;
+
+}
+
+.prev-btn{
+
+left:10px;
+
+}
+
+.next-btn{
+
+right:10px;
+
+}
+
+#imageCounter{
+
+bottom:15px;
+
+}
+
+}
+
+/* ==========================================================
+   Small Phones
+========================================================== */
+
+@media (max-width:576px){
+
+section{
+
+padding:90px 22px;
+
+}
+
+.navbar{
+
+padding:16px 22px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero-badge{
+
+font-size:12px;
+
+padding:8px 18px;
+
+}
+
+.section-title h2{
+
+font-size:30px;
+
+}
+
+.section-title p{
+
+font-size:15px;
+
+}
+
+.feature-card,
+
+.workflow-card,
+
+.testimonial-card,
+
+.stats-box{
+
+padding:28px;
+
+}
+
+.download-card h2{
+
+font-size:30px;
+
+}
+
+.download-card p{
+
+font-size:15px;
+
+}
+
+.gallery-card img{
+
+height:220px;
+
+}
+
+.faq-question{
+
+font-size:16px;
+
+padding:18px 20px;
+
+}
+
+.faq-answer{
+
+padding:0 20px 20px;
+
+}
+
+.footer-logo{
+
+font-size:22px;
+
+}
+
+.footer-content{
+
+font-size:14px;
+
+}
+
+#backToTop{
+
+width:48px;
+
+height:48px;
+
+font-size:18px;
+
+}
+
+}
+
+/* ==========================================================
+   Extra Small Devices
+========================================================== */
+
+@media (max-width:360px){
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.hero-stats{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.gallery-card img{
+
+height:180px;
+
+}
+
+}
+
+/* ==========================================================
+   Landscape Phones
+========================================================== */
+
+@media (max-height:550px){
+
+.hero{
+
+padding-top:110px;
+
+min-height:auto;
+
+}
+
+.scroll-indicator{
+
+display:none;
+
+}
+
+.nav-links{
+
+overflow-y:auto;
+
+}
+
+}
+
+/* ==========================================================
+   High Resolution Displays
+========================================================== */
+
+@media (min-width:2000px){
+
+body{
+
+font-size:18px;
+
+}
+
+.hero h1{
+
+font-size:96px;
+
+}
+
+.hero{
+
+max-width:1800px;
+
+margin:auto;
+
+}
+
+}
+
+/* ==========================================================
+   Print
+========================================================== */
+
+@media print{
+
+header,
+
+footer,
+
+#loader,
+
+#particles,
+
+#mouseGlow,
+
+#particleGlow,
+
+#backToTop,
+
+.scroll-indicator,
+
+.hero-buttons,
+
+.social-icons{
+
+display:none !important;
+
+}
+
+body{
+
+background:white;
+
+color:black;
+
+}
+
+section{
+
+padding:20px;
+
+}
+
+}
