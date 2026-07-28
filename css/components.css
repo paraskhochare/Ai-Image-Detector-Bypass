@@ -1,0 +1,420 @@
+/* ==========================================================
+   components.css
+   Reusable Components
+========================================================== */
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-primary,
+.btn-secondary{
+
+position:relative;
+
+overflow:hidden;
+
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:12px;
+
+cursor:pointer;
+
+user-select:none;
+
+transition:.35s;
+
+}
+
+.btn-primary:active,
+.btn-secondary:active{
+
+transform:scale(.97);
+
+}
+
+/* ===========================
+   RIPPLE
+=========================== */
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+transform:scale(0);
+
+background:rgba(255,255,255,.35);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   LIGHTBOX
+=========================== */
+
+#lightbox{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:99999;
+
+}
+
+#lightbox.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.lightbox-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.85);
+
+backdrop-filter:blur(12px);
+
+}
+
+.lightbox-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:90%;
+
+max-height:90%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+#lightboxImage{
+
+max-width:90vw;
+
+max-height:85vh;
+
+border-radius:16px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+}
+
+/* ===========================
+   LIGHTBOX BUTTONS
+=========================== */
+
+.close-btn,
+.prev-btn,
+.next-btn{
+
+position:absolute;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.1);
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+transition:.3s;
+
+backdrop-filter:blur(12px);
+
+}
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover{
+
+background:var(--primary);
+
+}
+
+.close-btn{
+
+top:-70px;
+
+right:0;
+
+}
+
+.prev-btn{
+
+left:-90px;
+
+}
+
+.next-btn{
+
+right:-90px;
+
+}
+
+/* ===========================
+   IMAGE COUNTER
+=========================== */
+
+#imageCounter{
+
+position:absolute;
+
+bottom:-55px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+font-size:14px;
+
+}
+
+/* ===========================
+   CURRENT NAV
+=========================== */
+
+.current{
+
+color:var(--primary2)!important;
+
+}
+
+.current::after{
+
+width:100%!important;
+
+}
+
+/* ===========================
+   ANIMATION CLASS
+=========================== */
+
+.animate{
+
+opacity:1!important;
+
+transform:translateY(0)!important;
+
+}
+
+/* ===========================
+   NAVBAR SCROLL
+=========================== */
+
+.navbar-scroll{
+
+background:rgba(5,8,15,.92)!important;
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+   MOUSE GLOW
+=========================== */
+
+#mouseGlow{
+
+position:fixed;
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:radial-gradient(
+
+circle,
+
+rgba(109,93,252,.18),
+
+transparent
+
+);
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
+
+filter:blur(18px);
+
+}
+
+/* ===========================
+   PARTICLE GLOW
+=========================== */
+
+#particleGlow{
+
+position:fixed;
+
+width:240px;
+
+height:240px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(
+
+circle,
+
+rgba(0,213,255,.08),
+
+transparent
+
+);
+
+filter:blur(60px);
+
+z-index:-2;
+
+}
+
+/* ===========================
+   HERO TAG
+=========================== */
+
+.hero-badge{
+
+animation:pulse 2.2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 rgba(109,93,252,0);
+
+}
+
+50%{
+
+box-shadow:0 0 30px rgba(109,93,252,.45);
+
+}
+
+100%{
+
+box-shadow:0 0 0 rgba(109,93,252,0);
+
+}
+
+}
+
+/* ===========================
+   GLASS
+=========================== */
+
+.glass{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+}
+
+/* ===========================
+   LOADED
+=========================== */
+
+.loaded{
+
+animation:fadePage .6s ease;
+
+}
+
+@keyframes fadePage{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
